@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executives</title>
+
+<style>
+
+html{
+    scroll-behavior:smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#021024;
+    color:white;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* BACKGROUND */
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-3;
+    background:
+    radial-gradient(circle at 70% 20%,
+    rgba(170,120,255,0.5),
+    transparent 30%),
+
+    radial-gradient(circle at 30% 40%,
+    rgba(0,140,255,0.45),
+    transparent 40%),
+
+    linear-gradient(
+    135deg,
+    #020617 0%,
+    #041d58 45%,
+    #192f85 100%);
+}
+
+/* DARK WAVES */
+
+body::after{
+    content:"";
+    position:fixed;
+    width:1400px;
+    height:700px;
+    right:-200px;
+    bottom:-250px;
+    border-radius:50%;
+    background:rgba(0,0,0,0.35);
+    transform:rotate(-15deg);
+    z-index:-2;
+}
+
+.wave1{
+    position:fixed;
+    width:1200px;
+    height:500px;
+    bottom:-100px;
+    right:-100px;
+    background:rgba(0,0,0,0.25);
+    border-radius:50%;
+    transform:rotate(-12deg);
+    z-index:-1;
+}
+
+/* NAVBAR */
+
+/*nav{
+    position:sticky;
+    top:0;
+    background:rgba(8,12,25,0.95);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 60px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    z-index:1000;
+}
+
+.logo{
+    font-size:38px;
+    color:#65f3ff;
+    font-weight:bold;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#67ffff;
+}*/
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 50px;
+    background: rgba(0,0,0,0.5);
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+}
+
+.navbar a:hover{
+    color:#69c7ff;
+}
+
+/* HERO */
+
+.hero{
+    padding:80px 80px 40px;
+}
+
+.small-title{
+    color:#64ffff;
+    letter-spacing:5px;
+    font-size:20px;
+}
+
+.hero h1{
+    font-size:75px;
+    margin-top:20px;
+    color:#57f7ff;
+}
+
+/* EXECUTIVE ROWS */
+
+.executive-row{
+    width:90%;
+    margin:70px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+}
+
+.executive-card{
+    display:flex;
+    gap:30px;
+}
+
+.executive-card img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #66ffff;
+    box-shadow:0 0 30px rgba(102,255,255,0.5);
+}
+
+.info h2{
+    color:white;
+    margin-bottom:10px;
+}
+
+.position{
+    color:#bbbbbb;
+    margin-bottom:20px;
+}
+
+.line{
+    height:2px;
+    background:#66ffff;
+    margin-bottom:20px;
+}
+
+.info p{
+    line-height:1.8;
+    color:#dddddd;
+}
+
+/* TEAM */
+
+.team{
+    padding:100px 60px;
+    text-align:center;
+}
+
+.team h1{
+    color:#5ef9ff;
+    font-size:70px;
+    margin-bottom:70px;
+}
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.member{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.member:hover{
+    transform:translateY(-10px);
+}
+
+.member img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.member h3{
+    color:#5ef9ff;
+    margin-top:20px;
+    font-size:18px;
+}
+
+.member h2{
+    margin-top:10px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    color:#bbbbbb;
+    background:rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    .executive-row{
+        grid-template-columns:1fr;
+    }
+
+    .team-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+}
+
+@media(max-width:700px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    .menu{
+        margin-top:20px;
+    }
+
+    .menu a{
+        display:inline-block;
+        margin:10px;
+    }
+
+    .executive-card{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .team-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wave1"></div>
+
+<nav class="navbar">
+    <div>
+        <h2>CINEMARK</h2>
+        <small>CONSULT LIMITED</small>
+    </div>
+
+
+    <ul>
+        <a href="who-we-are.html">Who We Are</a>
+        <a href="our-services.html">Our Services</a>
+        <a href="partners.html">Our Partners</a>
+        <a href="about.html">About Us</a>
+        <a href="executives.html">Executives</a>
+        <a href="license.html">License</a>
+        <a href="experience.html">Experience</a>
+        <a href="value.html">Value</a>
+        <a href="contact.html">Contact</a>
+    </ul>
+</nav>
+<section class="hero">
+    <p class="small-title">LEADERSHIP</p>
+    <h1>Director's Profiles</h1>
+</section>
+
+<div class="executive-row">
+
+    <div class="executive-card">
+        <img src="images/joe otin.avif">
+        <div class="info">
+            <h2>Joe Otin</h2>
+            <div class="position">Chairman</div>
+            <div class="line"></div>
+            <p>
+                Profile:
+• Joe Otin is a seasoned executive and communications leader with more than three decades of experience across advertising, media research, strategic advisory, and non-profit leadership in Africa.
+• He is the Chief Executive Officer of The Collective, a leading digital advertising agency in East Africa, where he drives innovation and high-impact brand solutions.
+• Joe has previously served as Managing Director for media research at Ipsos sub-Saharan Africa and held senior roles with global advertising networks. He is the Chairman of the Advertising Standards Board of Kenya and a former President of the Pan African Media Research Organization, and is widely recognized as an industry thought leader.
+            </p>
+        </div>
+    </div>
+
+    <div class="executive-card">
+        <img src="images/bernardgichuru.jpeg">
+        <div class="info">
+            <h2>Benard Gichuru</h2>
+            <div class="position">CEO</div>
+            <div class="line"></div>
+            <p>
+                Profile:
+• Benard Gichuru is a seasoned Investment Banker and Securities trader with over 15 years of experience in equities and fixed income trading. Having previously served as the Head of Institutional Trading at AIB-AXYS Africa, Benard excels in market analysis, deal negotiation and client relationship management. His career spans roles in corporate finance equities and fixed income trading.
+• Benard has an MBA from USIU-A and professional certifications from the Chartered Institute of Securities and Investments (CISI) and Moody's Analytics.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<div class="executive-row">
+
+    <div class="executive-card">
+        <img src="images/titusmarenye.jpeg">
+        <div class="info">
+            <h2>Titus Marenye</h2>
+            <div class="position">Director</div>
+            <div class="line"></div>
+            <p>
+                Profile:
+Titus is an accomplished Investment Professional with over a decade of expertise in trading, risk management and financial analysis across diverse asset classes including futures, FX, fixed income and equities.
+He has a proven track record of designing profitable strategies, managing portfolios and guiding teams to consistent success. His career spans leadership roles at AIB-AXYS Africa, Futures First Kenya and UAP Insurance, alongside advisory work with the Nairobi Securities Exchange.
+He holds a Bachelor of Science(Actuarial) from University of Nairobi. He is a Full Member of the Institute of Certified Investment and Financial Analysts (ICIFA). He also holds certification from the Chartered Institute of Securities and Investments (CISI).
+            </p>
+        </div>
+    </div>
+
+    <div class="executive-card">
+        <img src="images/andrewkaranja.avif">
+        <div class="info">
+            <h2>Andrew Karanja</h2>
+            <div class="position">Director</div>
+            <div class="line"></div>
+            <p>
+                Profile:
+• Andrew Karanja is an experienced technology and infrastructure professional based in Kenya, with a strong background in fibre-optic networks, telecommunications systems, and ICT project implementation.
+
+• He has built extensive expertise across network deployment, system integration, and technical training, and is a certified professional with the Fiber Optic Association (FOA). He has worked closely with multidisciplinary teams to deliver complex infrastructure projects, supporting reliable connectivity and operational efficiency across diverse environments.
+• His work reflects a practical, solutions-driven approach to technology deployment, underpinned by strong technical governance and adherence to industry standards. He brings a disciplined, hands-on perspective to large-scale ICT and connectivity initiatives.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<div class="executive-row">
+
+    <div class="executive-card">
+        <img src="images/justuskariuki.jpeg">
+        <div class="info">
+            <h2>Justus Kariuki</h2>
+            <div class="position">Director</div>
+            <div class="line"></div>
+            <p>
+                Profile:
+                Justus Kariuki is a seasoned Kenyan finance professional with more than 18 years of deep expertise in strategic leadership, business development, business acquisition, investment advisory, and high-level client relationship management within Kenya's dynamic financial services sector.
+Currently, he serves as Associate Director, Investments at Acorn Investment Management Limited (a subsidiary of Acorn Holdings Limited), where he plays a pivotal role in managing and growing real estate investment trusts (REITs), focusing on purpose-built rental housing and innovative financing solutions for urban Kenya.
+With a proven track record across asset management, collective investment schemes, and real estate investment vehicles, Justus combines strong commercial acumen with regulatory knowledge to deliver value in EA's evolving capital markets and investment landscape.
+            </p>
+        </div>
+    </div>
+
+    <div class="executive-card">
+        <img src="images/patricknjagi.jpeg">
+        <div class="info">
+            <h2>Patrick Njagi</h2>
+            <div class="position">Director</div>
+            <div class="line"></div>
+            <p>
+                Profile:
+Patrick Njagi is an experienced Advocate of the High Court of Kenya and a Senior Partner at Meru and Njagi Advocates, with a strong background in corporate, commercial, and environmental law. He serves as a Legal Executive at Payhouse Limited, where he provides legal oversight within the fintech and payments sector.
+Patrick has extensive experience in regulatory compliance, arbitration, civil litigation, and legal advisory for both public and private institutions. He has previously worked with government agencies and private companies, contributing to policy development and complex legal transactions. He is a graduate of the Kenya School of Law and is based in Nairobi.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<section class="team">
+
+    <h1>Meet Our Team</h1>
+
+    <div class="team-grid">
+
+        <div class="member">
+            <img src="images/bernardgichuru.jpeg">
+            <h3>FOUNDER & CEO</h3>
+            <h2>BENARD GICHURU</h2>
+        </div>
+
+        <div class="member">
+            <img src="images/titusmarenye.jpeg">
+            <h3>CHIEF OPERATING OFFICER</h3>
+            <h2>TITUS MARENYE</h2>
+        </div>
+
+        <div class="member">
+            <img src="images/andrewmaina.jpeg">
+            <h3>SENIOR TRADER</h3>
+            <h2>ANDREW MAINA</h2>
+        </div>
+
+        <div class="member">
+            <img src="images/kelvinarchibald.png">
+            <h3>SENIOR RESEARCH ANALYST</h3>
+            <h2>KELVIN ARCHIBALD</h2>
+        </div>
+
+        <div class="member">
+            <img src="images/annnjuguna.jpeg">
+            <h3>ADMIN & OPERATIONS</h3>
+            <h2>ANN NJUGUNA</h2>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2024 CINEMARK CONSULT LIMITED. All Rights Reserved.
+</footer>
+
+</body>
+</html>

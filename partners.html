@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Partners</title>
+
+<style>
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    color:white;
+    overflow-x:hidden;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(120,80,255,0.45),
+    transparent 35%),
+
+    radial-gradient(circle at center,
+    rgba(0,150,255,0.3),
+    transparent 50%),
+
+    linear-gradient(
+    135deg,
+    #020611,
+    #04142d,
+    #072660,
+    #050816);
+
+    background-attachment:fixed;
+}
+
+/* Moving light effect */
+body::before{
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
+    top:-50%;
+    left:-50%;
+
+    background:
+    repeating-linear-gradient(
+        120deg,
+        transparent 0px,
+        transparent 120px,
+        rgba(255,255,255,0.03) 130px,
+        transparent 150px
+    );
+
+    animation:move 15s linear infinite;
+    pointer-events:none;
+}
+
+@keyframes move{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(300px);
+    }
+}
+
+/* Navbar */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(10,15,25,0.95);
+    backdrop-filter:blur(10px);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 60px;
+
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+    font-size:34px;
+    color:#6ffaff;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+}
+
+.active{
+    color:#62f2ff;
+    border-bottom:3px solid #62f2ff;
+    padding-bottom:6px;
+}
+
+/* Sections */
+
+section{
+    min-height:100vh;
+    padding:80px;
+}
+
+.title{
+    text-align:center;
+    font-size:70px;
+    color:#69f2ff;
+    margin-bottom:80px;
+}
+
+/* Partner logos */
+
+.partners-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:80px;
+    justify-items:center;
+    align-items:center;
+}
+
+.partner-card{
+    background:rgba(255,255,255,0.05);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+
+    transition:0.4s;
+}
+
+.partner-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(0,255,255,0.3);
+}
+
+.partner-card img{
+    width:220px;
+}
+
+/* Thank You */
+
+.thank-you{
+    text-align:center;
+}
+
+.line{
+    width:90%;
+    height:2px;
+    background:white;
+    margin:40px auto;
+}
+
+.thank-you h1{
+    font-size:90px;
+    margin-top:100px;
+}
+
+.thank-you p{
+    font-size:32px;
+    color:#ddd;
+}
+
+/* Contact */
+
+.contact{
+    text-align:center;
+}
+
+.contact-section{
+    display:flex;
+    justify-content:center;
+    gap:70px;
+    flex-wrap:wrap;
+    margin-top:100px;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.icon{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:white;
+    color:#69f2ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    box-shadow:0 0 15px rgba(105,242,255,0.5);
+}
+
+.contact-item h4{
+    color:#69f2ff;
+    margin:0 0 5px;
+    font-size:14px;
+}
+
+.contact-item p{
+    margin:0;
+    font-size:18px;
+    color:white;
+}
+
+/* Dots */
+
+.dots{
+    text-align:center;
+    font-size:40px;
+    margin-top:50px;
+    color:white;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:rgba(0,0,0,0.4);
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .partners-grid{
+        grid-template-columns:1fr;
+    }
+
+    .title{
+        font-size:50px;
+    }
+
+    .thank-you h1{
+        font-size:60px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">CINEMARK</div>
+
+    <ul>
+        <li><a href="who-we-are.html">Who We Are</a></li>
+        <li><a href="our-services.html">Our Services</a></li>
+        <li><a href="partners.html" class="active">Our Partners</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="executives.html">Executives</a></li>
+        <li><a href="license.html">License</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="value.html">Value</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- FIRST SCREEN -->
+
+<section>
+
+    <h1 class="title">Our Partners</h1>
+
+    <div class="partners-grid">
+
+        <div class="partner-card">
+            <img src="images/nse.png" alt="NSE">
+        </div>
+
+        <div class="partner-card">
+            <img src="images/capital.png" alt="CMA">
+        </div>
+
+        <div class="partner-card">
+            <img src="images/shield.png" alt="Government">
+        </div>
+
+        <div class="partner-card">
+            <img src="images/cdsc.png" alt="CDSC">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SECOND SCREEN -->
+
+<section class="thank-you">
+
+    <div class="dots">
+        ○ ○ ○ ○
+    </div>
+
+    <div class="line"></div>
+
+    <h1>THANK YOU</h1>
+
+    <p>We look forward to working with you</p>
+
+    <div class="line"></div>
+
+</section>
+
+<!-- THIRD SCREEN -->
+
+<section class="contact">
+
+    <div class="contact-section">
+
+        <div class="contact-item">
+            <div class="icon">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+                <h4>CONTACT US</h4>
+                <p>+254 725 705 504</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="icon">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+                <p>trading@cinemarkconsult.com</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="icon">
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <div>
+                <p>www.cinemarkconsult.com</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="dots">
+        ○ ○ ○ ○
+    </div>
+
+</section>
+
+<footer>
+    © 2026 CINEMARK Consult Limited. All Rights Reserved.
+</footer>
+
+</body>
+</html>

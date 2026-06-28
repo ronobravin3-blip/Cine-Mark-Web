@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CINEMARK CONSULT LIMITED</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    color:white;
+    overflow-x:hidden;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(150,120,255,0.35),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(0,255,255,0.08),
+    transparent 40%),
+
+    linear-gradient(
+    135deg,
+    #06111f 0%,
+    #0d1f44 50%,
+    #07111d 100%);
+}
+
+/* NAVBAR */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:90px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+
+    background:rgba(5,10,20,0.9);
+    backdrop-filter:blur(10px);
+
+    z-index:1000;
+}
+
+.logo h1{
+    color:#75f9ff;
+    font-size:36px;
+}
+
+.logo p{
+    font-size:12px;
+    letter-spacing:4px;
+}
+
+/* DESKTOP MENU */
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#6afaff;
+}
+
+/* HAMBURGER */
+
+.menu-btn{
+    display:none;
+    font-size:45px;
+    cursor:pointer;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:100%;
+    height:100vh;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(140,120,255,0.4),
+    transparent 30%),
+
+    linear-gradient(
+    135deg,
+    #08111f,
+    #102548,
+    #08111f);
+
+    backdrop-filter:blur(20px);
+
+    transition:0.4s;
+    z-index:2000;
+
+    padding:120px 50px;
+}
+
+.mobile-menu.active{
+    right:0;
+}
+
+.mobile-menu a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    font-size:38px;
+    margin:35px 0;
+    font-weight:600;
+}
+
+.close-btn{
+    position:absolute;
+    top:25px;
+    right:40px;
+    font-size:55px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 20px;
+}
+
+.hero h2{
+    font-size:80px;
+    margin-bottom:30px;
+}
+
+.hero span{
+    color:#72fbff;
+}
+
+.hero p{
+    font-size:22px;
+    color:#dddddd;
+    margin-bottom:40px;
+}
+
+.button{
+    padding:18px 45px;
+    border:none;
+    border-radius:40px;
+
+    background:linear-gradient(
+    90deg,
+    #58f6ff,
+    #507cff);
+
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* MOBILE VIEW */
+
+@media (max-width:768px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero h2{
+        font-size:50px;
+    }
+
+    .mobile-menu{
+        width:100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h1>CINEMARK</h1>
+        <p>CONSULT LIMITED</p>
+    </div>
+
+    <nav class="nav-links">
+        <a href="who-we-are.html">Who We Are</a>
+        <a href="our-services.html">Our Services</a>
+        <a href="partners.html">Our Partners</a>
+        <a href="about.html">About Us</a>
+        <a href="executives.html">Executives</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="menu-btn" onclick="openMenu()">
+        ☰
+    </div>
+
+</header>
+
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <span class="close-btn"
+    onclick="closeMenu()">✕</span>
+
+    <a href="#">Who We Are</a>
+    <a href="#">Our Services</a>
+    <a href="#">Our Partners</a>
+    <a href="#">About Us</a>
+    <a href="#">Executives</a>
+    <a href="#">License</a>
+    <a href="#">Experience</a>
+    <a href="#">Value</a>
+    <a href="#">Contact</a>
+
+</div>
+
+<!-- MAIN PAGE -->
+
+<section class="hero">
+
+    <h2>
+        Your Trusted<br>
+        <span>Financial Partner</span>
+    </h2>
+
+    <p>
+        Excellence in Investment and Financial Services
+    </p>
+
+    <button class="button">
+        Learn More
+    </button>
+
+</section>
+
+<script>
+
+function openMenu(){
+    document.getElementById("mobileMenu")
+    .classList.add("active");
+}
+
+function closeMenu(){
+    document.getElementById("mobileMenu")
+    .classList.remove("active");
+}
+
+</script>
+
+</body>
+</html>

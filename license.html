@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow-x: hidden;
+
+            background:
+            radial-gradient(circle at 30% 20%,
+            rgba(60,120,255,0.5),
+            transparent 40%),
+
+            radial-gradient(circle at 80% 10%,
+            rgba(180,100,255,0.3),
+            transparent 35%),
+
+            linear-gradient(
+            135deg,
+            #020817 0%,
+            #04153b 35%,
+            #0a2d78 65%,
+            #081529 100%);
+        }
+
+        nav {
+            background: rgba(20,20,20,0.8);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #8fffff;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            color: #67ffff;
+        }
+
+        .license-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 80vh;
+        }
+
+        .license-image {
+            width: 25%;
+        }
+
+        .license-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .license-content {
+            width: 45%;
+            padding: 30px;
+        }
+
+        .license-content h1 {
+            font-size: 60px;
+            margin-bottom: 40px;
+        }
+
+        .license-content h3 {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .license-content ul {
+            padding-left: 20px;
+        }
+
+        .license-content li {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .license-content li::marker {
+            color: #66ffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #cccccc;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 700px;
+            height: 700px;
+            background: rgba(0,0,0,0.35);
+            border-radius: 50%;
+            bottom: -300px;
+            right: -100px;
+            z-index: -1;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 800px;
+            height: 300px;
+            background: rgba(50,50,90,0.4);
+            border-radius: 50%;
+            top: 250px;
+            right: -200px;
+            transform: rotate(-20deg);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+   <nav class="navbar">
+        <div class="logo">
+            <h2>CINEMARK</h2>
+            <small>CONSULT LIMITED</small>
+        </div>
+
+        <ul>
+            <li><a href="who-we-are.html" class="active">Who We Are</a></li>
+            <li><a href="our-services.html">Our Services</a></li>
+            <li><a href="partners.html">Our Partners</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="executives.html">Executives</a></li>
+            <li><a href="license.html">License</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="value.html">Value</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="license-section">
+
+        <div class="license-image">
+            <img src="images/cytonn-photography-GJao3ZTX9gU-unsplash.jpg" alt="Left Image">
+        </div>
+
+        <div class="license-content">
+
+            <h1>Scope of License</h1>
+
+            <h3>What we are licensed to do:</h3>
+
+            <ul>
+                <li>Government of Kenya Treasury Bills & Bonds</li>
+                <li>Infrastructure Bonds (IFBs)</li>
+                <li>Approved Corporate Bonds</li>
+                <li>Secondary market Eurobonds trading</li>
+                <li>Fixed income research & market intelligence</li>
+                <li>Discretionary & Non-discretionary fixed income services</li>
+            </ul>
+
+        </div>
+
+        <div class="license-image">
+            <img src="images/volodymyr-hryshchenko-KZocXyI3kRo-unsplash.jpg" alt="Right Image">
+        </div>
+
+    </section>
+
+  
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value Proposition</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            background:
+                radial-gradient(circle at 75% 20%,
+                rgba(175,130,255,0.45),
+                transparent 30%),
+                linear-gradient(135deg,
+                #020b2d 0%,
+                #003cff 45%,
+                #081642 100%);
+            background-attachment: fixed;
+            color: white;
+            min-height:100vh;
+        }
+
+        /* Navigation */
+
+        nav{
+            width:100%;
+            height:85px;
+            background:rgba(0,0,0,0.45);
+            backdrop-filter:blur(8px);
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:0 50px;
+            position:sticky;
+            top:0;
+            z-index:1000;
+            border-bottom:1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo{
+            color:#7dfcff;
+        }
+
+        .logo h1{
+            font-size:40px;
+        }
+
+        .logo p{
+            font-size:12px;
+            letter-spacing:3px;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:30px;
+        }
+
+        nav ul li a{
+            color:white;
+            text-decoration:none;
+            font-weight:600;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover,
+        .active{
+            color:#67ffff;
+            border-bottom:3px solid #67ffff;
+            padding-bottom:5px;
+        }
+
+        /* Main Section */
+
+        .container{
+            max-width:1100px;
+            margin:auto;
+            padding:80px 50px;
+        }
+
+        .title{
+            font-size:80px;
+            color:#57f0ff;
+            margin-bottom:70px;
+            font-weight:bold;
+        }
+
+        .value-box{
+            display:flex;
+            gap:35px;
+            margin-bottom:70px;
+            padding-bottom:45px;
+            border-bottom:1px solid rgba(255,255,255,0.12);
+        }
+
+        .number{
+            font-size:65px;
+            color:#57f0ff;
+            min-width:90px;
+        }
+
+        .content h2{
+            font-size:45px;
+            margin-bottom:20px;
+        }
+
+        .content ul{
+            padding-left:25px;
+        }
+
+        .content li{
+            font-size:24px;
+            line-height:1.8;
+            margin-bottom:12px;
+        }
+
+        /* Curved background shapes */
+
+        body::before{
+            content:"";
+            position:fixed;
+            width:900px;
+            height:900px;
+            background:rgba(0,0,0,0.35);
+            border-radius:50%;
+            bottom:-500px;
+            right:-150px;
+            z-index:-1;
+        }
+
+        body::after{
+            content:"";
+            position:fixed;
+            width:1200px;
+            height:300px;
+            background:rgba(155,140,255,0.18);
+            transform:rotate(-25deg);
+            top:250px;
+            right:-250px;
+            z-index:-1;
+        }
+
+        footer{
+            border-top:1px solid rgba(255,255,255,0.1);
+            padding:30px 50px;
+            color:#ccc;
+            font-size:18px;
+        }
+
+        /* Responsive */
+
+        @media(max-width:900px){
+
+            nav{
+                flex-direction:column;
+                height:auto;
+                padding:20px;
+            }
+
+            nav ul{
+                flex-wrap:wrap;
+                justify-content:center;
+                margin-top:15px;
+            }
+
+            .title{
+                font-size:50px;
+            }
+
+            .value-box{
+                flex-direction:column;
+            }
+
+            .content h2{
+                font-size:32px;
+            }
+
+            .content li{
+                font-size:20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <h1>CINEMARK</h1>
+            <p>CONSULT LIMITED</p>
+        </div>
+
+        <ul>
+         <li><a href="who-we-are.html">Who We Are</a></li>
+        <li><a href="our-services.html">Our Services</a></li>
+        <li><a href="partners.html">Our Partners</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="executives.html">Executives</a></li>
+        <li><a href="license.html">License</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="value.html">Value</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h1 class="title">Value Proposition</h1>
+
+        <div class="value-box">
+            <div class="number">01</div>
+
+            <div class="content">
+                <h2>Fixed Income & Long-Term Capital Expertise</h2>
+
+                <ul>
+                    <li>Specialist support in yield curve positioning, duration management and credit selection.</li>
+
+                    <li>Market intelligence on infrastructure bonds and sovereign issues.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="value-box">
+            <div class="number">02</div>
+
+            <div class="content">
+                <h2>Institutional-Scale Execution & Liquidity Management</h2>
+
+                <ul>
+                    <li>Deep expertise in government securities, corporate bonds and EuroBonds.</li>
+
+                    <li>Active liquidity management for benefit payments and cash flow timing.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="value-box">
+            <div class="number">03</div>
+
+            <div class="content">
+                <h2>Governance, Risk & Regulatory Assurance</h2>
+
+                <ul>
+                    <li>CMA-licensed broker aligned with governance requirements.</li>
+
+                    <li>Robust best-execution policies and compliance reviews.</li>
+
+                    <li>Strong operational risk controls protecting fiduciary interests.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="value-box">
+            <div class="number">04</div>
+
+            <div class="content">
+                <h2>Actionable Intelligence & Research</h2>
+
+                <ul>
+                    <li>Independent research covering fixed income and macroeconomic trends.</li>
+
+                    <li>Regular market outlooks and credit insights.</li>
+
+                    <li>Research tailored to long-term investment objectives.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+</body>
+</html>
